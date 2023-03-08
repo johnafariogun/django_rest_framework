@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from django.db.models import Q
 
 
-from .models import Advocate
+from base.models import Advocate
 from .serializers import AdvocateSerializer
 # Create your views here.
 @api_view(['GET'])
@@ -15,6 +15,7 @@ def endpoints(request):
     return Response(data)
     # return JsonResponse(data, safe = False)
     # safe = False allows us to receive other data types and not just dictionaries
+
 
 @api_view(['GET',"POST"])
 def advocate_list(request):
